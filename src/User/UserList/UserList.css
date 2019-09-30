@@ -1,0 +1,7 @@
+.user-list {
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 2rem;
+  justify-items: center;
+  margin-top: 3rem;
+}
