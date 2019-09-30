@@ -1,0 +1,4 @@
+const FETCH_USER = "FETCH_USER";
+const UPDATE_USER = "UPDATE_USER";
+
+export { FETCH_USER, UPDATE_USER };
