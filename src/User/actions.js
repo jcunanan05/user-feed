@@ -1,16 +1,10 @@
-import { takeEvery, call, put } from "redux-saga/effects";
-import { FETCH_USER, UPDATE_USER } from "./constants";
-import helpers from "./helpers";
-import api from "./api";
+import { UPDATE_USER, FETCH_USER } from "./constants";
 
-function* fetchUser() {
-  yield takeEvery(FETCH_USER, getUser);
-}
-
-function* getUser() {
-  const results = yield call(api.getUser);
-  yield put(updateUser(helpers.getAndTrimUser(results)));
-}
+const fetchUser = () => {
+  return {
+    type: FETCH_USER
+  };
+};
 
 const updateUser = newUser => {
   return {
@@ -20,3 +14,8 @@ const updateUser = newUser => {
 };
 
 export { updateUser, fetchUser };
+
+export default {
+  updateUser,
+  fetchUser
+};
